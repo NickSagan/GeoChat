@@ -19,9 +19,10 @@ struct K {
         static let lighBlue = "BrandLightBlue"
     }
     
-    struct FStore {
+    struct FBase {
         static let collectionName = "messages"
-        static let senderField = "sender"
+        static let userField = "user"
+        static let messageID = "id"
         static var senderGeo = "geo"
         static let bodyField = "body"
         static let dateField = "date"

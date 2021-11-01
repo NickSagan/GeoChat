@@ -10,8 +10,11 @@ import MessengerKit
 import Firebase
 
 class ViewController: MSGMessengerViewController, MSGDelegate {
-
+    
+    let db = Firestore.firestore()
     var id = 10
+    var user: User?
+    
     // Users in the chat
     
     let steve = User(displayName: "Steve", avatar: #imageLiteral(resourceName: "MeAvatar"), avatarUrl: nil, isSender: true)
@@ -27,8 +30,8 @@ class ViewController: MSGMessengerViewController, MSGDelegate {
                 MSGMessage(id: 4, body: .text("Beautiful GeoChat app"), user: tim, sentAt: Date()),
             ],
             [
-                MSGMessage(id: 2, body: .text("Yeah sure, gimme 5"), user: steve, sentAt: Date()),
-                MSGMessage(id: 3, body: .text("Okay ready when you are"), user: steve, sentAt: Date())
+                MSGMessage(id: 2, body: .text("Yeah sure, gimme 5"), user: user as! MSGUser, sentAt: Date()),
+                MSGMessage(id: 3, body: .text("Okay ready when you are"), user: user as! MSGUser, sentAt: Date())
             ]
         ]
     }()
@@ -38,15 +41,34 @@ class ViewController: MSGMessengerViewController, MSGDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
+        
+        user = User(displayName: (Auth.auth().currentUser?.email)! , isSender: true)
     }
     
     override func inputViewPrimaryActionTriggered(inputView: MSGInputView) {
-        id += 1
         
-        let body: MSGMessageBody = .text(inputView.message)
-        
-        let message = MSGMessage(id: id, body: body, user: steve, sentAt: Date())
-        insert(message)
+        if inputView.message != "" {
+            if let user = Auth.auth().currentUser?.email {
+                
+                id += 1
+                let body: MSGMessageBody = .text(inputView.message)
+                let message = MSGMessage(id: id, body: body, user: self.user as! MSGUser, sentAt: Date())
+                insert(message)
+                
+                db.collection(K.FBase.collectionName).addDocument(data: [
+                    K.FBase.userField : user,
+                    K.FBase.messageID : id,
+                    K.FBase.bodyField : inputView.message,
+                    K.FBase.dateField : NSDate()
+                ]) { (error) in
+                    if let e = error{
+                        print(e)
+                    } else {
+                        print("Successfully saved data")
+                    }
+                }
+            }
+        }
     }
     
     override func insert(_ message: MSGMessage) {
