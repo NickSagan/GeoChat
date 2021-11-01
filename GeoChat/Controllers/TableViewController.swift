@@ -9,6 +9,8 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    var peopleAround = ["Ivan Ivanovich Ivanov", "Sergei Sergeevich Petrov", "Petr Petrovich Sergeev","Maria Ivanovna Sidorova","Irina Irinovna Irinova"]
+    
     override func viewDidLoad() {
         title = "People nearby"
     }
@@ -20,12 +22,12 @@ class TableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return peopleAround.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        cell.textLabel?.text = "Ivan Ivanovich Ivanov"
+        cell.textLabel?.text = peopleAround[indexPath.row]
         return cell
     }
 
