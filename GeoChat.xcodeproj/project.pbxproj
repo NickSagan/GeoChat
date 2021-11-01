@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910D1B6E2730142100C91733 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 910D1B6D2730142100C91733 /* IQKeyboardManagerSwift */; };
+		910D1B722730218600C91733 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910D1B712730218600C91733 /* User.swift */; };
+		9180A257272FEE7000B774FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9180A256272FEE6F00B774FB /* GoogleService-Info.plist */; };
 		91C5DFBE272FC8CF00D51528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFBD272FC8CF00D51528 /* AppDelegate.swift */; };
 		91C5DFC0272FC8CF00D51528 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFBF272FC8CF00D51528 /* SceneDelegate.swift */; };
 		91C5DFC2272FC8CF00D51528 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFC1272FC8CF00D51528 /* WelcomeViewController.swift */; };
@@ -15,9 +18,16 @@
 		91C5DFCA272FC8DC00D51528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91C5DFC8272FC8DC00D51528 /* LaunchScreen.storyboard */; };
 		91C5DFD2272FCC6E00D51528 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFD1272FCC6E00D51528 /* RegistrationViewController.swift */; };
 		91C5DFD4272FCC8100D51528 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFD3272FCC8100D51528 /* LoginViewController.swift */; };
+		91C5DFDB272FD56000D51528 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFDA272FD56000D51528 /* Constants.swift */; };
+		91C5DFDD272FD89E00D51528 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFDC272FD89E00D51528 /* TableViewController.swift */; };
+		91C5DFDF272FD8D900D51528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5DFDE272FD8D900D51528 /* ViewController.swift */; };
+		D84221DF850FDC9513DDBC47 /* Pods_GeoChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A40BB791FAC58C9F50A99D58 /* Pods_GeoChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35DDEA8C5E9B5E6186E4BED2 /* Pods-GeoChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoChat.debug.xcconfig"; path = "Target Support Files/Pods-GeoChat/Pods-GeoChat.debug.xcconfig"; sourceTree = "<group>"; };
+		910D1B712730218600C91733 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9180A256272FEE6F00B774FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91C5DFBA272FC8CF00D51528 /* GeoChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91C5DFBD272FC8CF00D51528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91C5DFBF272FC8CF00D51528 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +38,11 @@
 		91C5DFCB272FC8DC00D51528 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91C5DFD1272FCC6E00D51528 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		91C5DFD3272FCC8100D51528 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		91C5DFDA272FD56000D51528 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		91C5DFDC272FD89E00D51528 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		91C5DFDE272FD8D900D51528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A40BB791FAC58C9F50A99D58 /* Pods_GeoChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5FDF8541E0D704D515F0FD /* Pods-GeoChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoChat.release.xcconfig"; path = "Target Support Files/Pods-GeoChat/Pods-GeoChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +50,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84221DF850FDC9513DDBC47 /* Pods_GeoChat.framework in Frameworks */,
+				910D1B6E2730142100C91733 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		431F0B11D9C757D9CFB22F89 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A40BB791FAC58C9F50A99D58 /* Pods_GeoChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		910D1B702730216D00C91733 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				910D1B712730218600C91733 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		91C5DFB1272FC8CF00D51528 = {
 			isa = PBXGroup;
 			children = (
 				91C5DFBC272FC8CF00D51528 /* GeoChat */,
 				91C5DFBB272FC8CF00D51528 /* Products */,
+				D36D6DACE710417E989031C7 /* Pods */,
+				431F0B11D9C757D9CFB22F89 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +95,9 @@
 		91C5DFBC272FC8CF00D51528 /* GeoChat */ = {
 			isa = PBXGroup;
 			children = (
+				91C5DFCB272FC8DC00D51528 /* Info.plist */,
+				9180A256272FEE6F00B774FB /* GoogleService-Info.plist */,
+				910D1B702730216D00C91733 /* Models */,
 				91C5DFD7272FCCBC00D51528 /* Views */,
 				91C5DFD5272FCC8600D51528 /* Controllers */,
 				91C5DFD6272FCC9E00D51528 /* Supporting files */,
@@ -73,6 +111,9 @@
 				91C5DFC1272FC8CF00D51528 /* WelcomeViewController.swift */,
 				91C5DFD1272FCC6E00D51528 /* RegistrationViewController.swift */,
 				91C5DFD3272FCC8100D51528 /* LoginViewController.swift */,
+				91C5DFDA272FD56000D51528 /* Constants.swift */,
+				91C5DFDC272FD89E00D51528 /* TableViewController.swift */,
+				91C5DFDE272FD8D900D51528 /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -83,7 +124,6 @@
 				91C5DFBD272FC8CF00D51528 /* AppDelegate.swift */,
 				91C5DFBF272FC8CF00D51528 /* SceneDelegate.swift */,
 				91C5DFC6272FC8DC00D51528 /* Assets.xcassets */,
-				91C5DFCB272FC8DC00D51528 /* Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -97,6 +137,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		D36D6DACE710417E989031C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35DDEA8C5E9B5E6186E4BED2 /* Pods-GeoChat.debug.xcconfig */,
+				FA5FDF8541E0D704D515F0FD /* Pods-GeoChat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,15 +153,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91C5DFCE272FC8DC00D51528 /* Build configuration list for PBXNativeTarget "GeoChat" */;
 			buildPhases = (
+				345E0C30AB422DF98D9D295C /* [CP] Check Pods Manifest.lock */,
 				91C5DFB6272FC8CF00D51528 /* Sources */,
 				91C5DFB7272FC8CF00D51528 /* Frameworks */,
 				91C5DFB8272FC8CF00D51528 /* Resources */,
+				94202E6C230D11471FA1A87E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = GeoChat;
+			packageProductDependencies = (
+				910D1B6D2730142100C91733 /* IQKeyboardManagerSwift */,
+			);
 			productName = GeoChat;
 			productReference = 91C5DFBA272FC8CF00D51528 /* GeoChat.app */;
 			productType = "com.apple.product-type.application";
@@ -141,6 +195,9 @@
 				Base,
 			);
 			mainGroup = 91C5DFB1272FC8CF00D51528;
+			packageReferences = (
+				910D1B6C2730142100C91733 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 91C5DFBB272FC8CF00D51528 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -156,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91C5DFCA272FC8DC00D51528 /* LaunchScreen.storyboard in Resources */,
+				9180A257272FEE7000B774FB /* GoogleService-Info.plist in Resources */,
 				91C5DFC7272FC8DC00D51528 /* Assets.xcassets in Resources */,
 				91C5DFC5272FC8CF00D51528 /* Main.storyboard in Resources */,
 			);
@@ -163,13 +221,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		345E0C30AB422DF98D9D295C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoChat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94202E6C230D11471FA1A87E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoChat/Pods-GeoChat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoChat/Pods-GeoChat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoChat/Pods-GeoChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91C5DFB6272FC8CF00D51528 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				91C5DFC2272FC8CF00D51528 /* WelcomeViewController.swift in Sources */,
+				91C5DFDD272FD89E00D51528 /* TableViewController.swift in Sources */,
+				91C5DFDF272FD8D900D51528 /* ViewController.swift in Sources */,
+				91C5DFDB272FD56000D51528 /* Constants.swift in Sources */,
 				91C5DFBE272FC8CF00D51528 /* AppDelegate.swift in Sources */,
+				910D1B722730218600C91733 /* User.swift in Sources */,
 				91C5DFD2272FCC6E00D51528 /* RegistrationViewController.swift in Sources */,
 				91C5DFD4272FCC8100D51528 /* LoginViewController.swift in Sources */,
 				91C5DFC0272FC8CF00D51528 /* SceneDelegate.swift in Sources */,
@@ -316,6 +420,7 @@
 		};
 		91C5DFCF272FC8DC00D51528 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35DDEA8C5E9B5E6186E4BED2 /* Pods-GeoChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -344,6 +449,7 @@
 		};
 		91C5DFD0272FC8DC00D51528 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA5FDF8541E0D704D515F0FD /* Pods-GeoChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -392,6 +498,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		910D1B6C2730142100C91733 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		910D1B6D2730142100C91733 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 910D1B6C2730142100C91733 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91C5DFB2272FC8CF00D51528 /* Project object */;
 }
