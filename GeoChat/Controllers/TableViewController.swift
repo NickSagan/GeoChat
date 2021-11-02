@@ -6,13 +6,34 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, CLLocationManagerDelegate {
+    
+    let locationManager = CLLocationManager()
     
     var peopleAround = ["Ivan Ivanovich Ivanov", "Sergei Sergeevich Petrov", "Petr Petrovich Sergeev","Maria Ivanovna Sidorova","Irina Irinovna Irinova"]
     
     override func viewDidLoad() {
         title = "People nearby"
+        
+        // Ask for Authorisation from the User.
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        title = "lat: " + String(format: "%g", locValue.latitude) + " / lon: " + String(format: "%g", locValue.longitude)
     }
 
     // MARK: - Table view data source
